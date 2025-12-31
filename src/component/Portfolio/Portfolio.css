@@ -1,0 +1,205 @@
+.portfolio-section {
+  padding: 1px 10%;
+  background: #f9fafc;
+  padding-top: 4px;
+  margin-bottom: 70px;
+}
+.portfolio-title {
+  text-align: left;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.portfolio-title h1 {
+  font-size: 1.5rem;
+  color: hwb(232 8% 57%);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.4rem;
+}
+
+.portfolio-title h1::before {
+  content: "";
+  display: inline;
+  width: 6px;
+  height: 40px;
+  background-color: orange;
+  border-radius: 3px;
+}
+
+.portfolio-title p {
+  font-size: 1.1rem;
+  color: #555;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+/* grid 3 cards */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-left: 0px;
+}
+
+/* card */
+.portfolio-card {
+  cursor: pointer;
+  border: 1px solid #e2dddd;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* تعديل مهم */
+  justify-content: flex-start; /* اضغط العناصر للأعلى */
+  align-items: stretch; /* خلي النصوص تاخد عرض كامل */
+}
+
+.portfolio-card:hover {
+  transform: scale(1.03);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+.portfolio-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.portfolio-card h3 {
+  margin: 5px 10px;
+  color: #122079;
+}
+.portfolio-card p {
+  margin: 0; /* بلا فراغات */
+  padding: 10px 15px; /* مساحة داخلية */
+  width: 100%; /* تاخد عرض الكرت بالكامل */
+  box-sizing: border-box; /* مهم جداً */
+}
+
+.portfolio-desc {
+  background: #f5f5f5; /* خلفية عرض كامل */
+  text-align: left;
+  padding: 15px 15px;
+  line-height: 1.5;
+  border-radius: 6px;
+  width: 100%;
+  margin: 8px 0 0 0; /* أعلى فقط، لا يوجد أسفل */
+}
+
+.portfolio-date {
+  font-weight: bold;
+  border-top: 2px solid #ddd;
+  background: white;
+  color: #555454;
+  font-size: 13px;
+  text-align: start;
+  margin: 0; /* إزالة أي مسافة إضافية تحت التاريخ */
+  padding: 10px 15px; /* مسافة داخلية مناسبة */
+}
+
+.show-more-btn {
+  height: 50px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background: #dd6e06;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.show-more-btn:hover {
+  background: #0f1a5c;
+}
+
+.post-image-container {
+  position: relative;
+}
+
+.open-modal-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #f5f5f5;
+  padding: 2px 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.open-modal-icon:hover {
+  background-color: #b1afaf;
+}
+
+@media (max-width: 600px) {
+  /* Grid: صفين لكل صف */
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  /* تصغير الكارد */
+  .portfolio-card {
+    font-size: 0.85rem; /* أصغر شوي للنصوص */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  /* الصورة */
+  .portfolio-card img {
+    height: 150px; /* أصغر لتقليل طول الكارد */
+    object-fit: cover;
+  }
+
+  /* العناوين */
+  .portfolio-card h3 {
+    font-size: 1rem;
+    margin: 5px 10px;
+  }
+
+  /* الفقرة */
+  .portfolio-card p {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+
+  .portfolio-desc {
+    display: none;
+  }
+  .modal-content p {
+    font-size: 0.7rem;
+  }
+  /* التاريخ */
+  .portfolio-date {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  /* زر show more */
+  .show-more-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+    height: 40px;
+  }
+
+  /* post icon */
+  .open-modal-icon {
+    font-size: 16px;
+    padding: 1px 2px;
+  }
+}

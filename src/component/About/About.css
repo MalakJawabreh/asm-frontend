@@ -1,0 +1,245 @@
+.about-header {
+  text-align: left;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.about-header h1 {
+  font-size: 1.5rem;
+  color: hwb(232 8% 57%);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.3rem;
+}
+
+.about-header h1::before {
+  content: "";
+  display: inline;
+  width: 6px;
+  height: 40px;
+  background-color: orange;
+  border-radius: 3px;
+}
+
+.about-header p {
+  font-size: 1.1rem;
+  color: #555;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+.about-section {
+  padding: 80px 10%;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Company Section */
+.about-company {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0px;
+  margin-bottom: 30px;
+}
+
+.about-text {
+  margin-top: 90px;
+  flex: 1;
+  text-align: left; /* نتأكد إن النص كله يبدأ من اليسار */
+  margin-left: 0; /* ما يكون في أي فراغ */
+  padding-left: 0;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #122079;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  margin-left: 0;
+  text-align: left;
+}
+
+.features {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-item i {
+  font-size: 1.5rem;
+  color: #fca311;
+  transition: color 0.3s ease;
+}
+
+.feature-item h4 {
+  font-size: 1.1rem;
+  color: #122079;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(5px); /* حركة خفيفة لليمين */
+}
+
+.feature-item:hover i {
+  color: #ffba33; /* أفتح شوي لما نمرر الماوس */
+}
+
+.feature-item:hover h4 {
+  color: #0d1a66; /* تغمق شوي عند اللمس */
+}
+
+.about-image {
+  flex: 1;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.founder-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f9fafc;
+  padding: 25px 30px;
+  border-left: 4px solid #fca311;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 650px; /* خليه أعرض */
+  margin-top: 30px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-info:hover {
+  transform: translateY(-4px);
+  background-color: #f5f5f5;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* الصورة والاسم بنفس السطر */
+.founder-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.founder-header img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fca311;
+}
+
+.founder-header h3 {
+  color: #122079;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* الوصف */
+.founder-info p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  max-width: 100%;
+}
+
+/* Simple fade-in effect */
+.about-section {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 50px 5%; /* تقليل padding */
+  }
+
+  /* حذف الصورة */
+  .about-image {
+    display: none;
+  }
+
+  /* النصوص */
+  .about-text h2 {
+    font-size: 2rem; /* أصغر شوي */
+  }
+
+  .about-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .features {
+    gap: 5px;
+  }
+
+  .feature-item h4 {
+    font-size: 1rem;
+  }
+
+  .feature-item i {
+    font-size: 1.3rem;
+  }
+
+  .founder-info {
+    padding: 5px 5px;
+    max-width: 100%;
+  }
+
+  .founder-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .founder-header img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .about-company {
+    flex-direction: column; /* ترتيب عمودي بدل side-by-side */
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

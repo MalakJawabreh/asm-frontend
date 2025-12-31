@@ -1,0 +1,166 @@
+.admin-posts-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 80px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.admin-post-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.admin-post-card:hover {
+  transform: translateY(-4px);
+}
+
+.admin-post-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.admin-post-desc {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.admin-post-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.admin-post-images img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Delete button */
+.delete-btn {
+  width: 100%;
+  padding: 8px 0;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #c9302c;
+}
+
+/* Popup Modal */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background: white;
+  padding: 25px;
+  width: 320px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.popup-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-buttons button {
+  width: 48%;
+  padding: 8px 0;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.filter-box {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ✨ هذا اللي بخليهم بالنص */
+  gap: 20px;
+  margin-bottom: 30px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  width: fit-content; /* ✨ مهم جداً حتى ياخد حجم المحتوى فقط */
+  margin-left: auto; /* ✨ يخليه بالنص */
+  margin-right: auto; /* ✨ يخليه بالنص */
+}
+
+/* Date input wrapper with arrow */
+.date-input-wrapper {
+  position: relative;
+  width: 170px;
+}
+
+.date-picker-input {
+  width: 100%;
+  padding: 8px 7px 8px 7px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Fake arrow icon */
+.date-input-wrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #666;
+  pointer-events: none;
+}
+
+/* Clear Filter Button */
+.clear-filter {
+  background: #ff6666;
+  margin-left: 20px;
+  color: #fff;
+  border: none;
+  padding: 8px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.clear-filter:hover {
+  background: #d9534f;
+}

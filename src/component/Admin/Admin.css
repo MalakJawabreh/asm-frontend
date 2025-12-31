@@ -1,0 +1,168 @@
+/* ============ ADMIN LOGIN PAGE ============ */
+.admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+
+.admin-form {
+  background-color: #fff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  width: 360px;
+  text-align: center;
+  position: relative;
+}
+
+.admin-form h2 {
+  margin-bottom: 25px;
+  color: #122079;
+  font-weight: bold;
+}
+
+.admin-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #d3d3d3;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.admin-form input:focus {
+  border-color: #122079;
+}
+
+.admin-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ec7925;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: background-color 0.2s;
+}
+
+.admin-form button:hover {
+  background-color: #d86b1f;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: green;
+  margin-bottom: 10px;
+}
+
+/* ============ MODAL ============ */
+
+.update-modal-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.update-modal-content {
+  background: #fff;
+  padding: 28px 30px;
+  border-radius: 12px;
+  width: 330px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  position: relative;
+  animation: modalFade 0.25s ease-out;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.update-modal-content h3 {
+  margin-bottom: 18px;
+  color: #122079;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.update-modal-content input {
+  width: 100%;
+  padding: 10px 3px;
+  margin: 0 auto 15px auto; /* يوسّط المدخلات فعليًا */
+  display: block;
+  border-radius: 6px;
+  border: 1px solid #831d1d;
+  font-size: 1rem;
+}
+
+.update-modal-content input:focus {
+  border-color: #122079;
+}
+
+/* OK Button */
+.ok-btn {
+  background-color: #122079;
+  color: white;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ok-btn:hover {
+  background-color: #0e1a66;
+}
+
+/* Close Button (X) */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #444;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Success or Error inside modal */
+.update-modal-content p.message {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: green;
+}
