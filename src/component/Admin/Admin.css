@@ -174,7 +174,7 @@
   }
 
   .admin-form {
-    width: 300px;
+    width: 250px;
   }
 
   .admin-form h2 {
@@ -195,7 +195,7 @@
   .update-modal-content {
     width: 80%;
     max-width: 250px;
-    padding: 15px 30px;
+    padding: 15px 40px;
     border-radius: 8px;
   }
 
