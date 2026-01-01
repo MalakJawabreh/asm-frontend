@@ -145,7 +145,7 @@
   background-color: #b1afaf;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   /* Grid: صفين لكل صف */
   .portfolio-grid {
     grid-template-columns: repeat(1, 1fr);
@@ -162,7 +162,7 @@
 
   /* الصورة */
   .portfolio-card img {
-    height: 150px; /* أصغر لتقليل طول الكارد */
+    height: 180px; /* أصغر لتقليل طول الكارد */
     object-fit: cover;
   }
 
