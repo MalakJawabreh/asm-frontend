@@ -166,3 +166,58 @@
   font-size: 0.95rem;
   color: green;
 }
+
+/* 📱 Responsive for mobile */
+@media (max-width: 480px) {
+  .admin-login-container {
+    padding: 15px;
+  }
+
+  .admin-form {
+    width: 100%;
+    max-width: 320px;
+    padding: 25px 20px;
+    border-radius: 8px;
+  }
+
+  .admin-form h2 {
+    font-size: 20px;
+  }
+
+  .admin-form input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .admin-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* 🔹 Update modal card */
+  .update-modal-content {
+    width: 90%;
+    max-width: 300px;
+    padding: 20px 18px;
+    border-radius: 8px;
+  }
+
+  .update-modal-content h3 {
+    font-size: 18px;
+  }
+
+  .update-modal-content input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .ok-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .close-btn {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+}

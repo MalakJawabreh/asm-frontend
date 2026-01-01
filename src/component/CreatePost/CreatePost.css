@@ -83,3 +83,32 @@
 .create-post-form select option {
   padding: 12px;
 }
+/* 📱 Responsive for mobile */
+@media (max-width: 480px) {
+  .create-post-container {
+    padding: 15px;
+  }
+
+  .create-post-form {
+    width: 100%;
+    max-width: 320px;
+    padding: 25px 20px;
+    border-radius: 8px;
+  }
+
+  .create-post-form h2 {
+    font-size: 20px;
+  }
+
+  .create-post-form input,
+  .create-post-form textarea,
+  .create-post-form select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .create-post-form button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
