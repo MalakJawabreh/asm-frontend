@@ -96,8 +96,8 @@
     gap: 15px;
   }
   .contact-left .contact-card {
-    width: 300px; /* عرض كامل الشاشة */
-    max-width: 500px; /* أقصى عرض للكارد */
+    width: 240px; /* عرض كامل الشاشة */
+    max-width: 300px; /* أقصى عرض للكارد */
     flex: none; /* يلغي flex-grow و flex-shrink */
     margin: 0 auto; /* لتوسيط الكارد على الشاشة */
   }
