@@ -225,7 +225,7 @@
 
   .founder-info {
     padding: 5px 5px;
-    max-width: 70%;
+    max-width: 85%;
   }
 
   .founder-header h3 {
@@ -235,6 +235,10 @@
   .founder-header img {
     width: 70px;
     height: 70px;
+  }
+  .founder-info p {
+    font-size: 0.8rem;
+    font-weight: 600;
   }
 
   .about-company {
